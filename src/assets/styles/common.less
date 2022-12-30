@@ -1,0 +1,90 @@
+.main__page__wrapper {
+	&.has__header {
+		.main__page__content {
+			padding-top: @layout-header-height;
+		}
+	}
+	&.has__appsidebar {
+		.main__page__content {
+			display: flex;
+			flex-direction: column;
+			background-color: @layout-content-background;
+			height: 100vh;
+		}
+	}
+	.main__app__content {
+		display: flex;
+		flex-direction: column;
+
+		.app__container {
+			display: flex;
+			flex-direction: column;
+			padding-left: @gutter;
+			padding-right: @gutter;
+			padding-bottom: @gutter;
+
+			&__card {
+				height: 100%;
+			}
+		}
+	}
+}
+
+.ag-grid-wrapper {
+	height: 100%;
+	min-height: 400px;
+}
+
+.logo__wrapper {
+	height: @logo-height;
+	display: flex;
+	align-items: center;
+	img {
+		max-height: 100%;
+		max-width: 100%;
+
+		& + span {
+			margin-left: @logo-space;
+		}
+	}
+	span {
+		white-space: nowrap;
+		font-size: @logo-text-size;
+		font-weight: bold;
+		color: @text-color;
+	}
+}
+
+.fullscreen__spinner__wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+.section {
+	padding: @section-padding;
+}
+
+.section__big__title {
+	display: block;
+	font-weight: bold;
+	font-size: 56px;
+	color: @text-color;
+}
+
+.section__subtitle {
+	display: block;
+	font-size: 24px;
+	color: @text-color-secondary;
+}
+
+.ant-card {
+	.card__title {
+		font-weight: 600;
+	}
+}

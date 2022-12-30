@@ -1,0 +1,164 @@
+// Text Alignment
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.text-left {
+	text-align: left;
+}
+
+// Display Flex-Box
+.d-flex {
+	display: flex;
+}
+.justify-content-center {
+	justify-content: center;
+}
+.align-items-center {
+	align-items: center;
+}
+
+/* Create Width Hadling Classes */
+
+.Fun_widthPercentLoop (@i) when (@i > 0) {
+	.span-@{i} {
+		width: ~"@{i}%";
+	}
+	.Fun_widthPercentLoop(@i - 5);
+}
+.Fun_widthPercentLoop(100);
+
+.Fun_widthBigPixel (@i) when (@i > 500) {
+	.width-@{i} {
+		width: ~"@{i}px";
+		max-width: 100%;
+	}
+	.Fun_widthBigPixel(@i - 100);
+}
+.Fun_widthBigPixel(1000);
+
+.Fun_widthSmallPixel (@i) when (@i > 0) {
+	.width-@{i} {
+		width: ~"@{i}px";
+		max-width: 100%;
+	}
+	.Fun_widthSmallPixel(@i - 25);
+}
+.Fun_widthSmallPixel(500);
+
+/* Create Margin and Padding Handling Classes */
+
+.Fun_SpacingPixel (@i) when (@i >= 0) {
+	/* Margin */
+	.m-@{i} {
+		margin: ~"@{i}px";
+	}
+	.ml-@{i} {
+		margin-left: ~"@{i}px";
+	}
+	.mr-@{i} {
+		margin-right: ~"@{i}px";
+	}
+	.mt-@{i} {
+		margin-top: ~"@{i}px";
+	}
+	.mb-@{i} {
+		margin-bottom: ~"@{i}px";
+	}
+	.mh-@{i} {
+		margin-left: ~"@{i}px";
+		margin-right: ~"@{i}px";
+	}
+	.mv-@{i} {
+		margin-top: ~"@{i}px";
+		margin-bottom: ~"@{i}px";
+	}
+
+	/* Padding */
+	.p-@{i} {
+		padding: ~"@{i}px";
+	}
+	.pl-@{i} {
+		padding-left: ~"@{i}px";
+	}
+	.pr-@{i} {
+		padding-right: ~"@{i}px";
+	}
+	.pt-@{i} {
+		padding-top: ~"@{i}px";
+	}
+	.pb-@{i} {
+		padding-bottom: ~"@{i}px";
+	}
+	.ph-@{i} {
+		padding-left: ~"@{i}px";
+		padding-right: ~"@{i}px";
+	}
+	.pv-@{i} {
+		padding-top: ~"@{i}px";
+		padding-bottom: ~"@{i}px";
+	}
+	.Fun_SpacingPixel(@i - 5);
+}
+.Fun_SpacingPixel(100);
+
+.m-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+.ml-auto {
+	margin-left: auto;
+}
+.mr-auto {
+	margin-right: auto;
+}
+
+.m-gutter {
+	margin: @gutter;
+}
+.ml-gutter {
+	margin-left: @gutter;
+}
+.mr-gutter {
+	margin-right: @gutter;
+}
+.mt-gutter {
+	margin-top: @gutter;
+}
+.mb-gutter {
+	margin-bottom: @gutter;
+}
+.mh-gutter {
+	margin-left: @gutter;
+	margin-right: @gutter;
+}
+.mv-gutter {
+	margin-top: @gutter;
+	margin-bottom: @gutter;
+}
+
+.p-gutter {
+	padding: @gutter;
+}
+.pl-gutter {
+	padding-left: @gutter;
+}
+.pr-gutter {
+	padding-right: @gutter;
+}
+.pt-gutter {
+	padding-top: @gutter;
+}
+.pb-gutter {
+	padding-bottom: @gutter;
+}
+.ph-gutter {
+	padding-left: @gutter;
+	padding-right: @gutter;
+}
+.pv-gutter {
+	padding-top: @gutter;
+	padding-bottom: @gutter;
+}

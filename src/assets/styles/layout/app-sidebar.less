@@ -1,0 +1,38 @@
+.main__page__appsidebar {
+	height: 100vh;
+	background: @layout-sidebar-background;
+
+	.ant-menu {
+		background: @layout-sidebar-background;
+		.ant-menu-sub {
+			background: darken(@layout-sidebar-background, 3%);
+		}
+	}
+
+	&.ant-layout-sider-collapsed {
+		.logo__wrapper {
+			span {
+				display: none;
+			}
+		}
+	}
+	.logo__wrapper {
+		height: @layout-header-height;
+		padding: 10px @gutter;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		margin-bottom: 10px;
+
+		span {
+			color: #fff;
+		}
+	}
+}
+
+.ant-menu-submenu-popup {
+	.ant-menu-vertical.ant-menu-sub,
+	.ant-menu-vertical-left.ant-menu-sub,
+	.ant-menu-vertical-right.ant-menu-sub {
+		max-height: initial;
+		//background: darken(@layout-sidebar-background, 3%);
+	}
+}

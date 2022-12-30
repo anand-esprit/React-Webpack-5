@@ -1,0 +1,24 @@
+.hero__section {
+	display: flex;
+	align-items: center;
+	background-color: @white;
+	height: calc(~"100vh - @{layout-header-height}");
+
+	.content_wrapper {
+		align-items: center;
+	}
+
+	&__img {
+		width: 80%;
+		animation: infiniteRotation 15s linear infinite;
+	}
+}
+
+@keyframes infiniteRotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
