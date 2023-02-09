@@ -36,7 +36,7 @@ export default class RootStore {
 
 	public setAxiosInterceptor = (): void => {
 		axios.interceptors.request.use((config) => {
-			let header  = config.headers;
+			let header: any  = config.headers;
 			header = {...header, "Timezone": Intl.DateTimeFormat().resolvedOptions().timeZone}
 			const authToken = localStorage.getItem("token");
 			header = (authToken) ? {
