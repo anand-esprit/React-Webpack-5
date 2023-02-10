@@ -50,6 +50,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-dev-utils": "^9.0.11"
+    "@types/react-dev-utils": "^9.0.11",
+    "nth-check": ">=2.0.1"
   }
 }
