@@ -1,8 +1,155 @@
-.register__section,
-.login__section {
-	min-height: calc(~"100vh - @{layout-header-height}");
-	background-color: @primary-color;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.loginSection {
+  .loginWrap {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    .loginLogo {
+      width: 60%;
+      text-align: center;
+      position: relative;
+      .loginBanner {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: left;
+        img {
+          max-width: 90%;
+          max-height: calc(100vh - 60%);
+        }
+      }
+      .logo {
+        width: 100%;
+        padding-top: 30px;
+      }
+    }
+  }
+
+  @media (max-width: 1600px) {
+    .loginWrap .loginLogo .loginBanner img {
+      max-width: 75%;
+    }
+  }
+}
+
+.loginForm {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: @primary-color;
+  .loginFormWrap {
+    max-width: 434px;
+    width: 100%;
+    // padding: 40px 30px;
+    // box-shadow: 0px 0px 14px -8px rgb(0 0 0 / 75%);
+  }
+  .formTitle {
+    margin-bottom: 40px;
+    text-align: center;
+    h2 {
+      display: inline-block;
+      font-size: 34px;
+      font-weight: 600;
+      margin: 0;
+      color: @white;
+    }
+  }
+  .ant-form {
+    .ant-form-item {
+      margin-bottom: 40px;
+      .ant-input-suffix {
+        color: @white;
+        opacity: 0.8;
+        .ant-input-password-icon {
+          color: @white;
+        }
+      }
+    }
+    .ant-form-item-row {
+      position: relative;
+    }
+    .ant-form-item-label {
+      overflow: visible;
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      z-index: 99;
+      background-color: @primary-color;
+      padding: 0 5px;
+      label {
+        font-size: 15px;
+        font-weight: 500;
+        color: @white;
+        letter-spacing: 0.5px;
+      }
+    }
+    .ant-input,
+    .ant-input-affix-wrapper {
+      background-color: transparent;
+      padding: 0 15px;
+      height: 55px;
+      color: @white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .ant-input-affix-wrapper {
+      .ant-input {
+        border: 0;
+        height: auto;
+        border-radius: 0;
+      }
+    }
+    .ant-input-affix-wrapper:focus,
+    .ant-input-affix-wrapper-focused {
+      box-shadow: none;
+    }
+    input:-internal-autofill-selected {
+      background-color: transparent !important;
+    }
+    .ant-input:focus,
+    .ant-input-focused {
+      box-shadow: none;
+    }
+    .ant-btn {
+      font-size: 20px;
+      font-weight: 500;
+      background: #fff;
+      border: 2px solid transparent;
+      color: @primary-color;
+      text-shadow: none;
+      box-shadow: none;
+      border-radius: 5px;
+      height: auto;
+      width: 100%;
+      margin-top: 20px;
+      transition: all 0.5s ease;
+      &:hover {
+        transform: none;
+        color: @white;
+        background-color: @secondary-color;
+        // border-color: @secondary-color;
+      }
+    }
+  }
+}
+
+.unauthoriseModal {
+  .loginForm {
+    width: 100%;
+    padding: 70px 30px;
+  }
+  &.ant-modal {
+    .ant-modal-close {
+      display: none;
+    }
+    .ant-modal-body {
+      padding: 2px;
+    }
+  }
 }

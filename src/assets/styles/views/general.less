@@ -1,0 +1,80 @@
+.ant-table table {
+  border: 1px solid #f0f0f0;
+  box-shadow: 0px 0px 20px 0px rgb(76 87 125 / 2%);
+  .ant-table-thead > tr > th {
+    .themeColorOpacity(@primary-color,0.1);
+  }
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td,
+  .ant-table tfoot > tr > th,
+  .ant-table tfoot > tr > td {
+    padding: 10px 15px;
+  }
+  .ant-table-tbody > tr {
+    > td {
+      border-right: 1px solid #f0f0f0;
+      &:last-child {
+        border-right: 0;
+      }
+    }
+    &:last-child {
+      > td {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+.adminDropdown {
+  min-width: 220px;
+  .ant-form-item {
+    margin: 0;
+  }
+}
+#map {
+  height: 100%;
+}
+
+.addModerator {
+  .addBtn {
+    border: 1px solid @secondary-color;
+    color: @secondary-color;
+    font-weight: 500;
+    border-radius: 5px;
+  }
+  .anticon-minus-circle {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+}
+
+.mapModal {
+  #map {
+    height: calc(85vh - 220px);
+  }
+}
+
+.colorBoxCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .gridColorBox {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+  }
+}
+
+.pagenotfound__section {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.osTag {
+  padding: 5px 8px;
+  background-color: #e5e5e5;
+  margin: 0 2px;
+  border-radius: 5px;
+}

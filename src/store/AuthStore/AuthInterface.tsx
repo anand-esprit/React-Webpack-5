@@ -1,17 +1,9 @@
-export type userType = {
-	firstname: string;
-	lastname: string;
-	email: string;
-};
-
 export type doLoginType = {
-	email: string;
-	password: string;
+  email: string;
+  password: string;
 };
 
-export type doRegisterType = {
-	firstname: string;
-	lastname: string;
-	email: string;
-	password: string;
+export type appListType = {
+  id: number;
+  city_name: string;
 };

@@ -1,13 +1,10 @@
-@import (css)
-	url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+// Third Party Stylesheets
+// @import "~antd/dist/reset.css"; // ant-d V5.1.0
+@import "~antd/dist/antd.less"; // Import Ant Design styles by less entry
 
 // Theme Variables
 //@ import "~antd/lib/style/themes/default.less";
 @import "variables.less";
-
-// Third Party Stylesheets
-@import '~antd/dist/reset.css';
-//@import "~antd/dist/antd.less"; // Import Ant Design styles by less entry
 
 // Common and Overrides Stylesheets
 @import "./utils/utilities.less";
@@ -15,7 +12,6 @@
 @import "./override.less";
 
 // Layout Stylesheets
-@import "./layout/header.less";
 @import "./layout/app-header.less";
 @import "./layout/app-sidebar.less";
 
@@ -23,7 +19,8 @@
 @import "./utils/container.less";
 
 // Sections Stylesheets
-@import "./sections/hero-section.less";
 
 // Views Stylesheets
 @import "./views/auth.less";
+@import "./views/form.less";
+@import "./views/general.less";

@@ -1,0 +1,22 @@
+.map-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .ant-form {
+    width: 100%;
+  }
+  &__map {
+    height: 55vh;
+    width: 100%;
+  }
+  .submitBtn {
+    margin-top: 20px;
+  }
+
+  @media (max-width: 1600px) {
+    &__map {
+      height: 48vh;
+      width: 100%;
+    }
+  }
+}

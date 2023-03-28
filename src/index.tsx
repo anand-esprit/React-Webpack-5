@@ -8,7 +8,9 @@ import PageSpinner from "./components/PageSpinner/PageSpinner";
 
 const root = createRoot(document.getElementById("root") as HTMLElement);
 root.render(
-	<Suspense fallback={<PageSpinner />}>
-		<App />
-	</Suspense>
+  <Suspense fallback={<PageSpinner />}>
+    {/* <React.StrictMode> */}
+    <App />
+    {/* </React.StrictMode> */}
+  </Suspense>
 );

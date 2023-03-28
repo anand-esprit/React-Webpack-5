@@ -6,15 +6,15 @@ import Router from "./config/RouterConfig";
 import useStore from "./store";
 
 const App: React.FC = observer(() => {
-	const { AUTH } = useStore();
-	const { InitializeApp, app_loading } = AUTH;
+  const { AUTH } = useStore();
+  const { InitializeApp, app_loading } = AUTH;
 
-	useEffect(() => {
-		InitializeApp();
-	}, []);
-	return (
-		<BrowserRouter>{app_loading ? <PageSpinner /> : <Router />}</BrowserRouter>
-	);
+  useEffect(() => {
+    InitializeApp();
+  }, [InitializeApp]);
+  return (
+    <BrowserRouter>{app_loading ? <PageSpinner /> : <Router />}</BrowserRouter>
+  );
 });
 
 export default App;

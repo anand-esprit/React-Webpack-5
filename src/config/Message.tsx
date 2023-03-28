@@ -82,7 +82,7 @@ export const Message = (): MessageProps => ({
 		select: (max, field) => `Please select maximum ${max} ${field}.`,
 		numeric: (max, field) => `${field} should contain maximum ${max} digits.`,
 	},
-	email: () => `Invalid email.`,
+	email: (field) => `${field} Is Invalid email.`,
 	regex: {
 		password: (field) => `${field} should contain at least an uppercase letter a lowercase letter a number and a special character.`,
 		numeric: () => `Please enter digits only.`,

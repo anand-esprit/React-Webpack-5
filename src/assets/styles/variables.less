@@ -1,28 +1,32 @@
-@primary-color: #3fb0fb;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
+
+@primary-color: #008fd5;
+@secondary-color: #71bf44;
 @black: #000;
 @white: #fff;
-@text-color-secondary: fade(@black, 45%);
+@success-color: #52c41a;
+@warning-color: #faad14;
+@error-color: #f5222d;
+@label-color: #7c7c7c;
+@primary-font: "Montserrat", sans-serif;
 
 @gutter: 24px;
-@font-family: "Montserrat", sans-serif;
 @text-color: #494949;
-@heading-color: @text-color;
-@border-radius-base: 4px;
-@border-color-base: #434343;
 
 // Main Header Variables
 @layout-body-background: @white;
-@layout-content-background: #white;
 @layout-header-background: @white;
-@layout-header-height: 64px;
-@layout-header-padding: 0 0;
 @layout-header-color: @text-color;
-@layout-sidebar-background: #263238;
+@layout-sidebar-background: #202b46;
+@layout-header-height: 70px;
+
+// Action Button Color variables
+@orange-btn: #ffa500;
+@red-btn: #f10000;
+@blue-btn: #0f01ff;
 
 // Main Header Logo Variables
 @logo-height: 42px;
-@logo-text-size: 18px;
-@logo-space: 10px;
 
 // Section Variables
 @section-padding: 50px;
@@ -31,6 +35,6 @@
 @screen-xl: 1200px;
 @screen-xxl: 1600px;
 
-@success-color: #52c41a;
-@warning-color: #faad14;
-@error-color: #f5222d;
+.themeColorOpacity(@rgbColor, @opacity) {
+  background-color: rgba(@rgbColor, @opacity);
+}

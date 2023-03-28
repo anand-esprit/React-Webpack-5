@@ -1,10 +1,14 @@
-// import { PageHeader } from "antd";
-import { PageHeader } from '@ant-design/pro-layout';
-
+import { observer } from "mobx-react-lite";
 import React from "react";
 
-const Dashboard: React.FC = () => {
-	return <PageHeader title="Dashboard" />;
-};
+const Dashboard: React.FC = observer(() => {
+  // const { AUTH } = useStore();
+  // console.log(toJS(AUTH.appList));
+  return (
+    <>
+      <div className="dashBoardWrap"></div>
+    </>
+  );
+});
 
 export default Dashboard;
