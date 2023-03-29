@@ -98,35 +98,4 @@ const Config: ConfigProps = {
   },
 };
 
-export const USER_ROLES = [
-  {
-    id: 1,
-    name: "Admin",
-  },
-  {
-    id: 2,
-    name: "Commissioner",
-  },
-  {
-    id: 3,
-    name: "Director",
-  },
-  {
-    id: 4,
-    name: "Divisional Head",
-  },
-  {
-    id: 5,
-    name: "Ward Officer",
-  },
-  {
-    id: 6,
-    name: "Civilians",
-  },
-  {
-    id: 7,
-    name: "Operator",
-  },
-];
-
 export default Config;
